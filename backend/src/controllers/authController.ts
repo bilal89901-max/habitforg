@@ -62,7 +62,7 @@ export const register = async (req: Request, res: Response) => {
         is_admin: user.is_admin
       } as JWTPayload,
       process.env.JWT_SECRET || 'default-secret',
-      { expiresIn: (process.env.JWT_EXPIRES_IN || '7d') as string | number }
+      { expiresIn: '7d' }
     );
 
     res.status(201).json({
@@ -111,7 +111,7 @@ export const login = async (req: Request, res: Response) => {
         is_admin: user.is_admin
       } as JWTPayload,
       process.env.JWT_SECRET || 'default-secret',
-      { expiresIn: (process.env.JWT_EXPIRES_IN || '7d') as string | number }
+      { expiresIn: '7d' }
     );
 
     res.json({
@@ -154,7 +154,7 @@ export const refreshToken = async (req: Request, res: Response) => {
         is_admin: user.is_admin
       } as JWTPayload,
       process.env.JWT_SECRET || 'default-secret',
-      { expiresIn: (process.env.JWT_EXPIRES_IN || '7d') as string | number }
+      { expiresIn: '7d' }
     );
 
     res.json({ token: newToken });

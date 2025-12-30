@@ -2,7 +2,7 @@ import { Response } from 'express';
 import pool from '../config/database';
 import { AuthRequest } from '../middleware/auth';
 
-export const getHabitAnalytics = async (req: AuthRequest, res: Response) {
+export const getHabitAnalytics = async (req: AuthRequest, res: Response) => {
   try {
     if (!req.user) {
       return res.status(401).json({ error: 'Unauthorized' });
@@ -65,7 +65,7 @@ export const getHabitAnalytics = async (req: AuthRequest, res: Response) {
   }
 };
 
-export const getAvatarAnalytics = async (req: AuthRequest, res: Response) {
+export const getAvatarAnalytics = async (req: AuthRequest, res: Response) => {
   try {
     if (!req.user) {
       return res.status(401).json({ error: 'Unauthorized' });
@@ -164,7 +164,7 @@ export const getAvatarAnalytics = async (req: AuthRequest, res: Response) {
   }
 };
 
-export const getLeaderboards = async (req: AuthRequest, res: Response) {
+export const getLeaderboards = async (req: AuthRequest, res: Response) => {
   try {
     const { type = 'level', limit = 50 } = req.query;
 
@@ -236,7 +236,7 @@ export const getLeaderboards = async (req: AuthRequest, res: Response) {
   }
 };
 
-export const getPrediction = async (req: AuthRequest, res: Response) {
+export const getPrediction = async (req: AuthRequest, res: Response) => {
   try {
     if (!req.user) {
       return res.status(401).json({ error: 'Unauthorized' });
@@ -308,7 +308,7 @@ export const getPrediction = async (req: AuthRequest, res: Response) {
   }
 };
 
-export const getUserComparison = async (req: AuthRequest, res: Response) {
+export const getUserComparison = async (req: AuthRequest, res: Response) => {
   try {
     if (!req.user) {
       return res.status(401).json({ error: 'Unauthorized' });

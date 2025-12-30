@@ -8,7 +8,7 @@ import apiClient from '@/lib/api/client';
 export default function DashboardPage() {
   const router = useRouter();
   const { user, isAuthenticated, logout } = useAuthStore();
-  const [avatar, setAvatar] = useState<any>(null);
+  const [avatar, setAvatar] = useState<Record<string, unknown> | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -72,16 +72,16 @@ export default function DashboardPage() {
             {avatar ? (
               <div className="space-y-2">
                 <p className="text-gray-200">
-                  <span className="font-semibold">Name:</span> {avatar.name}
+                  <span className="font-semibold">Name:</span> {String(avatar.name)}
                 </p>
                 <p className="text-gray-200">
-                  <span className="font-semibold">Level:</span> {avatar.level || 1}
+                  <span className="font-semibold">Level:</span> {String(avatar.level || 1)}
                 </p>
                 <p className="text-gray-200">
-                  <span className="font-semibold">Stage:</span> {avatar.current_evolution_stage}
+                  <span className="font-semibold">Stage:</span> {String(avatar.current_evolution_stage)}
                 </p>
                 <p className="text-gray-200">
-                  <span className="font-semibold">XP:</span> {avatar.total_xp || 0}
+                  <span className="font-semibold">XP:</span> {String(avatar.total_xp || 0)}
                 </p>
               </div>
             ) : (
@@ -95,27 +95,27 @@ export default function DashboardPage() {
               <div className="space-y-2">
                 <div className="flex justify-between">
                   <span className="text-gray-200">Strength:</span>
-                  <span className="text-red-400 font-bold">{avatar.strength || 1}</span>
+                  <span className="text-red-400 font-bold">{String(avatar.strength || 1)}</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-200">Intelligence:</span>
-                  <span className="text-blue-400 font-bold">{avatar.intelligence || 1}</span>
+                  <span className="text-blue-400 font-bold">{String(avatar.intelligence || 1)}</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-200">Vitality:</span>
-                  <span className="text-green-400 font-bold">{avatar.vitality || 1}</span>
+                  <span className="text-green-400 font-bold">{String(avatar.vitality || 1)}</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-200">Spirit:</span>
-                  <span className="text-purple-400 font-bold">{avatar.spirit || 1}</span>
+                  <span className="text-purple-400 font-bold">{String(avatar.spirit || 1)}</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-200">Social:</span>
-                  <span className="text-yellow-400 font-bold">{avatar.social || 1}</span>
+                  <span className="text-yellow-400 font-bold">{String(avatar.social || 1)}</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-200">Wealth:</span>
-                  <span className="text-amber-400 font-bold">{avatar.wealth || 0}</span>
+                  <span className="text-amber-400 font-bold">{String(avatar.wealth || 0)}</span>
                 </div>
               </div>
             )}
@@ -127,11 +127,11 @@ export default function DashboardPage() {
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
                   <span className="text-gray-200">💰 Gold:</span>
-                  <span className="text-yellow-400 font-bold text-xl">{avatar.gold || 100}</span>
+                  <span className="text-yellow-400 font-bold text-xl">{String(avatar.gold || 100)}</span>
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-gray-200">💎 Premium:</span>
-                  <span className="text-purple-400 font-bold text-xl">{avatar.premium_currency || 0}</span>
+                  <span className="text-purple-400 font-bold text-xl">{String(avatar.premium_currency || 0)}</span>
                 </div>
               </div>
             )}
@@ -173,7 +173,7 @@ export default function DashboardPage() {
           <div className="space-y-2 text-gray-300">
             <p>✨ <strong>Create habits</strong> to earn XP and level up your avatar</p>
             <p>🎯 <strong>Complete quests</strong> for bonus rewards</p>
-            <p>⚔️ <strong>Battle others</strong> to test your avatar's power</p>
+            <p>⚔️ <strong>Battle others</strong> to test your avatar&apos;s power</p>
             <p>👥 <strong>Add friends</strong> to compete and motivate each other</p>
             <p>🏰 <strong>Join a guild</strong> for collaborative challenges</p>
             <p>🛒 <strong>Visit the shop</strong> to customize your avatar</p>

@@ -1,12 +1,8 @@
 'use client';
 
-import { useEffect } from 'react';
-import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 
 export default function HomePage() {
-  const router = useRouter();
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -42,7 +38,7 @@ export default function HomePage() {
               <div className="text-5xl mb-4">📊</div>
               <h3 className="text-xl font-bold text-white mb-2">Track Habits</h3>
               <p className="text-gray-300">
-                Create custom habits linked to your avatar's stats. Daily exercise boosts Strength, reading increases Intelligence!
+                Create custom habits linked to your avatar&apos;s stats. Daily exercise boosts Strength, reading increases Intelligence!
               </p>
             </div>
 
