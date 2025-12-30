@@ -139,28 +139,28 @@ export default function DashboardPage() {
         </div>
 
         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          <button className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all">
+          <button onClick={() => router.push('/habits')} className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all">
             📝 Habits
           </button>
-          <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white py-4 rounded-xl font-semibold hover:from-purple-700 hover:to-pink-700 transition-all">
+          <button onClick={() => router.push('/quests')} className="bg-gradient-to-r from-purple-600 to-pink-600 text-white py-4 rounded-xl font-semibold hover:from-purple-700 hover:to-pink-700 transition-all">
             🎯 Quests
           </button>
-          <button className="bg-gradient-to-r from-green-600 to-emerald-600 text-white py-4 rounded-xl font-semibold hover:from-green-700 hover:to-emerald-700 transition-all">
+          <button onClick={() => router.push('/friends')} className="bg-gradient-to-r from-green-600 to-emerald-600 text-white py-4 rounded-xl font-semibold hover:from-green-700 hover:to-emerald-700 transition-all">
             👥 Friends
           </button>
-          <button className="bg-gradient-to-r from-red-600 to-orange-600 text-white py-4 rounded-xl font-semibold hover:from-red-700 hover:to-orange-700 transition-all">
+          <button onClick={() => router.push('/battle')} className="bg-gradient-to-r from-red-600 to-orange-600 text-white py-4 rounded-xl font-semibold hover:from-red-700 hover:to-orange-700 transition-all">
             ⚔️ Battle
           </button>
-          <button className="bg-gradient-to-r from-yellow-600 to-amber-600 text-white py-4 rounded-xl font-semibold hover:from-yellow-700 hover:to-amber-700 transition-all">
+          <button onClick={() => router.push('/guilds')} className="bg-gradient-to-r from-yellow-600 to-amber-600 text-white py-4 rounded-xl font-semibold hover:from-yellow-700 hover:to-amber-700 transition-all">
             🏰 Guilds
           </button>
-          <button className="bg-gradient-to-r from-indigo-600 to-blue-600 text-white py-4 rounded-xl font-semibold hover:from-indigo-700 hover:to-blue-700 transition-all">
+          <button onClick={() => router.push('/shop')} className="bg-gradient-to-r from-indigo-600 to-blue-600 text-white py-4 rounded-xl font-semibold hover:from-indigo-700 hover:to-blue-700 transition-all">
             🛒 Shop
           </button>
-          <button className="bg-gradient-to-r from-pink-600 to-rose-600 text-white py-4 rounded-xl font-semibold hover:from-pink-700 hover:to-rose-700 transition-all">
+          <button onClick={() => router.push('/analytics')} className="bg-gradient-to-r from-pink-600 to-rose-600 text-white py-4 rounded-xl font-semibold hover:from-pink-700 hover:to-rose-700 transition-all">
             📊 Analytics
           </button>
-          <button className="bg-gradient-to-r from-teal-600 to-cyan-600 text-white py-4 rounded-xl font-semibold hover:from-teal-700 hover:to-cyan-700 transition-all">
+          <button onClick={() => router.push('/settings')} className="bg-gradient-to-r from-teal-600 to-cyan-600 text-white py-4 rounded-xl font-semibold hover:from-teal-700 hover:to-cyan-700 transition-all">
             ⚙️ Settings
           </button>
         </div>
